@@ -1,0 +1,64 @@
+ [{
+    "event_id": "1",
+    "event_title": "Event Planning",
+    "event_location": "Hotel Indigo Singapore Katong",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "2",
+    "event_title": "Brainstorm Event",
+    "event_location": "The Fullerton Hotel Singapore",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "3",
+    "event_title": "Ideas & Inspiration Event",
+    "event_location": "Wyndham Toronto East Lakeview",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "4",
+    "event_title": "Inspired by Travel Event",
+    "event_location": "Shuter House, Toronto, Canada",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "5",
+    "event_title": "Inspired by Music Event",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "6",
+    "event_title": "Playful Event",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "7",
+    "event_title": "Casual Event",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "8",
+    "event_title": "Down to Business Ideas",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "9",
+    "event_title": "Sports Event",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  {
+    "event_id": "10",
+    "event_title": "Idioms to use as event",
+    "event_location": "Mayert",
+    "event_time": "69756 Wendy Junction",
+  },
+  
+  ]
+
+
