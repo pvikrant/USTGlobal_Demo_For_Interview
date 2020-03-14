@@ -17,8 +17,8 @@ class Login_VC: UIViewController {
             didSet
             {
                 lblTitle.text = "Start Networking!"
-                lblTitle.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                lblTitle.font = UIFont(name: App_Controller.shared.App_Font_Style_Bold, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")+2))!
+                lblTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                lblTitle.font = UIFont(name: Utilities.shared.App_Font_Style_Bold, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")+2))!
             }
         }
     @IBOutlet weak var btnNext: UIButton!
@@ -27,9 +27,9 @@ class Login_VC: UIViewController {
             {
                
                 
-                btnNext.backgroundColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Main_Color)
-                btnNext.setTitleColor(UIColor.GetColor(fromHEX: App_Controller.shared.App_Color_White), for: .normal)
-                btnNext.titleLabel?.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")))!
+                btnNext.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
+                btnNext.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
+                btnNext.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")))!
             }
         }
     @IBOutlet weak var txtEmail: UITextField!
@@ -37,8 +37,8 @@ class Login_VC: UIViewController {
             didSet
             {
                 txtEmail.text = "pvikrant.ios@gmail.com"
-                txtEmail.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                txtEmail.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-2))!
+                txtEmail.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                txtEmail.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-2))!
                 
             }
         }
@@ -46,23 +46,23 @@ class Login_VC: UIViewController {
         {
             didSet
             {
-                viewOfBorder.backgroundColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Main_Color)
+                viewOfBorder.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
             }
         }
     @IBOutlet weak var lblDetails: UILabel!
         {
             didSet
             {
-                lblDetails.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                lblDetails.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
+                lblDetails.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                lblDetails.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     @IBOutlet weak var btnPrivacyPolicy: UIButton!
         {
             didSet
             {
-            btnPrivacyPolicy.setTitleColor(UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color), for: .normal)
-                btnPrivacyPolicy.titleLabel?.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
+            btnPrivacyPolicy.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color), for: .normal)
+                btnPrivacyPolicy.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     
@@ -82,20 +82,20 @@ class Login_VC: UIViewController {
                 NavigateToListingPage()
             } else {
                 
-                let alert = UIAlertController(title: "Warning", message: "Email not in proper format", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
                 
-                self.present(alert, animated: true, completion: nil)
             }
             
         }
         
     }
     
-    func NavigateToListingPage(){
+    func NavigateToListingPage()
+    {
         let controller = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventList_VC") as! EventList_VC
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    
 }
+
 

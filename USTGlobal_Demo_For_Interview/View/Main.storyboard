@@ -9,7 +9,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Login_VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Login_VC" customModule="USTGlobal_Interview_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login_VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Login_VC" customModule="USTGlobal_Demo_For_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pub-g9-Nu5"/>
                         <viewControllerLayoutGuide type="bottom" id="pzK-xY-QuI"/>
@@ -164,7 +164,7 @@
         <!--Event ListVC-->
         <scene sceneID="Zsk-xe-Yac">
             <objects>
-                <viewController storyboardIdentifier="EventList_VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V90-7F-hrI" customClass="EventList_VC" customModule="USTGlobal_Interview_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventList_VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V90-7F-hrI" customClass="EventList_VC" customModule="USTGlobal_Demo_For_Interview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GOe-nO-CNN"/>
                         <viewControllerLayoutGuide type="bottom" id="CM6-f0-CQ0"/>
@@ -292,7 +292,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Events_Cell" rowHeight="260" id="U17-SO-Oc2" customClass="Events_Cell" customModule="USTGlobal_Interview_Demo" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Events_Cell" rowHeight="260" id="U17-SO-Oc2" customClass="Events_Cell" customModule="USTGlobal_Demo_For_Interview" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="260"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U17-SO-Oc2" id="1lz-G6-xAe">

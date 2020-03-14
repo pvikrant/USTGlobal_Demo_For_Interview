@@ -8,10 +8,10 @@
 
 import UIKit
 
-struct App_Controller
+struct Utilities
 {
+    static let shared = Utilities()
 
-    static let shared = App_Controller()
     let App_Name = "Google"
     
     let App_Font_Style_Normal = "myriadpro-light"
@@ -26,14 +26,6 @@ struct App_Controller
     let App_Color_White = "ffffff"
     let App_Color_Black = "000000"
     
-    // MARK: Device Size
-    
-    var Current_Device_Width320 = 18 as CGFloat // iPhone 5 , 5s , SE
-    var Current_Device_Width375 = 22 as CGFloat // iPhone 6 , 6s , 7 , 7s , 8 , 8s , X
-    var Current_Device_Width414 = 22 as CGFloat // iPhone 6+ , 7+ , 8+
-    var Current_Device_Width1024 = 30  as CGFloat // iPad
-    
-
 }
 
 

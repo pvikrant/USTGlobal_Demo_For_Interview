@@ -20,7 +20,7 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         {
             didSet
             {
-                viewOfHeader.backgroundColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Main_Color)
+                viewOfHeader.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
             }
         }
     
@@ -30,23 +30,23 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             {
                 
                 lblTitle.text = "Google Events"
-                lblTitle.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Color_White)
-                lblTitle.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")+2))!
+                lblTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White)
+                lblTitle.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")+2))!
             }
         }
     @IBOutlet weak var viewForButtons: UIView!
         {
             didSet
             {
-                viewForButtons.backgroundColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Main_Color)
+                viewForButtons.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
             }
         }
     @IBOutlet weak var btnCurrentUpcoming: UIButton!
         {
             didSet
             {
-                btnCurrentUpcoming.setTitleColor(UIColor.GetColor(fromHEX: App_Controller.shared.App_Color_White), for: .normal)
-                    btnCurrentUpcoming.titleLabel?.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                btnCurrentUpcoming.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
+                    btnCurrentUpcoming.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
             }
         }
     @IBOutlet weak var viewOfCurrentUpcomingBorder: UIView!
@@ -66,8 +66,8 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 
                 format.dateFormat = "MMMM YYYY"
                 lblMonthStatus.text = "\(format.string(from: date))"
-                lblMonthStatus.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                lblMonthStatus.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                lblMonthStatus.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                lblMonthStatus.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
             }
         }
     @IBOutlet weak var btnPast: UIButton!
@@ -75,8 +75,8 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             didSet
                 
             {
-                btnPast.setTitleColor(UIColor.GetColor(fromHEX: App_Controller.shared.App_Color_White), for: .normal)
-                btnPast.titleLabel?.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                btnPast.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
+                btnPast.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
             }
         }
     @IBOutlet weak var viewOfPastBorder: UIView!

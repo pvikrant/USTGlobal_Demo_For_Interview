@@ -23,7 +23,7 @@
 		23135B362418748F00E7E33C /* myriadpro-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23135B2D2418748F00E7E33C /* myriadpro-bold.otf */; };
 		23135B372418748F00E7E33C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B2F2418748F00E7E33C /* EventModel.swift */; };
 		23135B39241874B100E7E33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23135B38241874B100E7E33C /* Assets.xcassets */; };
-		23135B3B2418753700E7E33C /* App_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B3A2418753700E7E33C /* App_Controller.swift */; };
+		23135B3B2418753700E7E33C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B3A2418753700E7E33C /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 		23135B2D2418748F00E7E33C /* myriadpro-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myriadpro-bold.otf"; sourceTree = "<group>"; };
 		23135B2F2418748F00E7E33C /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		23135B38241874B100E7E33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23135B3A2418753700E7E33C /* App_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App_Controller.swift; sourceTree = "<group>"; };
+		23135B3A2418753700E7E33C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 				23135B212418748F00E7E33C /* Controllers */,
 				23135B38241874B100E7E33C /* Assets.xcassets */,
 				23135B012418741700E7E33C /* Info.plist */,
-				23135B3A2418753700E7E33C /* App_Controller.swift */,
+				23135B3A2418753700E7E33C /* Utilities.swift */,
 			);
 			path = USTGlobal_Demo_For_Interview;
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23135B3B2418753700E7E33C /* App_Controller.swift in Sources */,
+				23135B3B2418753700E7E33C /* Utilities.swift in Sources */,
 				23135B1D2418744B00E7E33C /* UIColor.swift in Sources */,
 				23135B322418748F00E7E33C /* Events_Cell.swift in Sources */,
 				23135B312418748F00E7E33C /* EventList_VC.swift in Sources */,

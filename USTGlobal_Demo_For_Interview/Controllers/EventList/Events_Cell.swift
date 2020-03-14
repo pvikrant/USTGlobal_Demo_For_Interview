@@ -19,24 +19,24 @@ class Events_Cell: UITableViewCell
             didSet
             {
                 
-                self.lblEventTitle.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                self.lblEventTitle.font = UIFont(name: App_Controller.shared.App_Font_Style_Bold, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")))!
+                self.lblEventTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                self.lblEventTitle.font = UIFont(name: Utilities.shared.App_Font_Style_Bold, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")))!
             }
         }
     @IBOutlet weak var lblEventLocation: UILabel!
         {
             didSet
             {
-                self.lblEventLocation.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                self.lblEventLocation.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
+                self.lblEventLocation.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                self.lblEventLocation.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     @IBOutlet weak var lblEventTime: UILabel!
         {
             didSet
             {
-                self.lblEventTime.textColor = UIColor.GetColor(fromHEX: App_Controller.shared.App_Text_Color)
-                self.lblEventTime.font = UIFont(name: App_Controller.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
+                self.lblEventTime.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
+                self.lblEventTime.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     
