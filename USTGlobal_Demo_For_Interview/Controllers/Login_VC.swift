@@ -82,7 +82,7 @@ class Login_VC: UIViewController {
                 NavigateToListingPage()
             } else {
                 
-                
+                alert()
             }
             
         }
@@ -94,7 +94,13 @@ class Login_VC: UIViewController {
         let controller = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventList_VC") as! EventList_VC
         self.navigationController?.pushViewController(controller, animated: true)
     }
-    
+    func alert()
+    {
+        let alert = UIAlertController(title: "Warning", message: "Email not in proper format", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
 }
 
