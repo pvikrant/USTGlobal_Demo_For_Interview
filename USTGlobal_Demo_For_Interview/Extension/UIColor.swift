@@ -1,8 +1,8 @@
 //
-//  UIColor.swift
+//  Events_Cell.swift
 //  USTGlobal_Interview_Demo
 //
-//  Created by Pinalkumar Prajapati on 10/03/20.
+//  Created by AppEdify TechnoWorld on 01/03/2020.
 //  Copyright © 2020 AppEdify TechnoWorld. All rights reserved.
 //
 
