@@ -31,7 +31,6 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 
                 lblTitle.text = "Google Events"
                 lblTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White)
-                lblTitle.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")+2))!
             }
         }
     @IBOutlet weak var viewForButtons: UIView!
@@ -46,7 +45,7 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             didSet
             {
                 btnCurrentUpcoming.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
-                    btnCurrentUpcoming.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                    
             }
         }
     @IBOutlet weak var viewOfCurrentUpcomingBorder: UIView!
@@ -67,7 +66,7 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 format.dateFormat = "MMMM YYYY"
                 lblMonthStatus.text = "\(format.string(from: date))"
                 lblMonthStatus.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
-                lblMonthStatus.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                
             }
         }
     @IBOutlet weak var btnPast: UIButton!
@@ -76,7 +75,7 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 
             {
                 btnPast.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
-                btnPast.titleLabel?.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-3))!
+                
             }
         }
     @IBOutlet weak var viewOfPastBorder: UIView!

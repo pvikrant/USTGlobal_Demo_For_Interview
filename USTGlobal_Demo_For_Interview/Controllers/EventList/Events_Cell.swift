@@ -18,9 +18,8 @@ class Events_Cell: UITableViewCell
         {
             didSet
             {
-                
                 self.lblEventTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
-                self.lblEventTitle.font = UIFont(name: Utilities.shared.App_Font_Style_Bold, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")))!
+                
             }
         }
     @IBOutlet weak var lblEventLocation: UILabel!
@@ -28,7 +27,6 @@ class Events_Cell: UITableViewCell
             didSet
             {
                 self.lblEventLocation.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
-                self.lblEventLocation.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     @IBOutlet weak var lblEventTime: UILabel!
@@ -36,7 +34,6 @@ class Events_Cell: UITableViewCell
             didSet
             {
                 self.lblEventTime.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
-                self.lblEventTime.font = UIFont(name: Utilities.shared.App_Font_Style_Normal, size: CGFloat(UserDefaults.standard.integer(forKey: "Text_Size")-5))!
             }
         }
     
