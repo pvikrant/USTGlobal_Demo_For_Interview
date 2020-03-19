@@ -9,45 +9,49 @@
 import UIKit
 
 
-class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
+{
     
     // MARK: Properties
     
+    @IBOutlet weak var viewOfBackground: UIView!
+        {
+            didSet
+            {
+                viewOfBackground.backgroundColor = Theme.currentTheme.app_Background
+            }
+        }
     @IBOutlet weak var btnMenu: UIButton!
     @IBOutlet weak var btnSearch: UIButton!
-    
     @IBOutlet weak var viewOfHeader: UIView!
         {
             didSet
             {
-                viewOfHeader.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
+                viewOfHeader.backgroundColor = Theme.currentTheme.App_Main_Color
             }
         }
-    
     @IBOutlet weak var lblTitle: UILabel!
         {
             didSet
             {
-                
                 lblTitle.text = "Google Events"
-                lblTitle.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White)
+                lblTitle.textColor = Theme.currentTheme.app_Tint
             }
         }
     @IBOutlet weak var viewForButtons: UIView!
         {
             didSet
             {
-                viewForButtons.backgroundColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Main_Color)
+                viewForButtons.backgroundColor = Theme.currentTheme.App_Main_Color
             }
         }
     @IBOutlet weak var btnCurrentUpcoming: UIButton!
         {
             didSet
             {
-                btnCurrentUpcoming.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
-                    
+                btnCurrentUpcoming.setTitleColor(Theme.currentTheme.app_Tint, for: .normal)
             }
-        }
+    }
     @IBOutlet weak var viewOfCurrentUpcomingBorder: UIView!
     @IBOutlet weak var viewOfMonthStatus: UIView!
         {
@@ -55,35 +59,31 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             {
                 viewOfMonthStatus.layer.cornerRadius = 5
                 viewOfMonthStatus.layer.masksToBounds = true
-                
             }
         }
     @IBOutlet weak var lblMonthStatus: UILabel!
         {
             didSet
             {
-                
                 format.dateFormat = "MMMM YYYY"
                 lblMonthStatus.text = "\(format.string(from: date))"
-                lblMonthStatus.textColor = UIColor.GetColor(fromHEX: Utilities.shared.App_Text_Color)
-                
+                lblMonthStatus.textColor = Theme.currentTheme.App_Text_Color
             }
         }
     @IBOutlet weak var btnPast: UIButton!
         {
             didSet
-                
             {
-                btnPast.setTitleColor(UIColor.GetColor(fromHEX: Utilities.shared.App_Color_White), for: .normal)
-                
+                btnPast.setTitleColor(Theme.currentTheme.app_Tint, for: .normal)
             }
-        }
+    }
     @IBOutlet weak var viewOfPastBorder: UIView!
     @IBOutlet weak var tblEventList: UITableView!
     
+    
     //MARK: Object Declaration
     
-    var arrOfEventsDetails = [EventModel]()
+    var arrOfEventsDetails = [Event_Listing_Model]()
     var selectedActionTag = Int()
     let date = Date()
     let format = DateFormatter()
@@ -93,57 +93,32 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
         selectedActionTag = 1
-        loadData()
-        
+        loadJson()
         viewOfCurrentUpcomingBorder.isHidden = false
-        
     }
     
     // MARK: Get data from Json
     
-    func loadData()
+    func loadJson()
     {
         arrOfEventsDetails.removeAll()
-        
-        var url1:URL?
+        var finalURl:URL?
         
         if selectedActionTag == 1
         {
-            if let url = Bundle.main.url(forResource: "UpcomingEvents", withExtension: "json") {
-                
-                url1 = url
-            }
+            finalURl = Bundle.main.url(forResource: "UpcomingEvents", withExtension: "json")
         }
         else
         {
-            if let url = Bundle.main.url(forResource: "PastEvents", withExtension: "json") {
-            
-                url1 = url
+            finalURl = Bundle.main.url(forResource: "PastEvents", withExtension: "json")
+        }
+        
+        getEventObjectWith(finalURl: finalURl!){ (data, error) in
+                self.arrOfEventsDetails = data
             }
-        }
-        
-        if let finalURl = url1
-        {
-            ConvertJsonToSwiftObject(finalURl)
-        }
     }
-    
-    fileprivate func ConvertJsonToSwiftObject(_ finalURl: URL) {
-        let decoder = JSONDecoder()
-        
-        do {
-            let jsonString = try String(contentsOf: finalURl)
-            let jsonData = Data(jsonString.utf8)
-            let people = try decoder.decode([EventModel].self, from: jsonData)
-            print(people)
-            arrOfEventsDetails.append(contentsOf: people)
-        } catch {
-            debugPrint(error)
-        }
-    }
-    
+
     // MARK: TableView Delegate & Datasource Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -160,12 +135,10 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Events_Cell") as! Events_Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Events_Listing_Cell") as! Events_Listing_Cell
         
         cell.setEventsCell(arrOfEventsDetails[indexPath.row])
         return cell
-    
     }
     // MARK: Controllers
     
@@ -185,21 +158,16 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         {
             viewOfPastBorder.backgroundColor = color
         }
-        loadData()
+        loadJson()
         tblEventList.reloadData()
     }
     
-        
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnMenuAction(_ sender: Any)
+    {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    @IBAction func btnSettingAction(_ sender: Any){ }
 }
 
 

@@ -11,7 +11,6 @@
 		23135B0B2418741700E7E33C /* USTGlobal_Demo_For_InterviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B0A2418741700E7E33C /* USTGlobal_Demo_For_InterviewTests.swift */; };
 		23135B182418743F00E7E33C /* UpcomingEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 23135B162418743F00E7E33C /* UpcomingEvents.json */; };
 		23135B192418743F00E7E33C /* PastEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 23135B172418743F00E7E33C /* PastEvents.json */; };
-		23135B1D2418744B00E7E33C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B1B2418744B00E7E33C /* UIColor.swift */; };
 		23135B1E2418744B00E7E33C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B1C2418744B00E7E33C /* String.swift */; };
 		23135B202418746800E7E33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B1F2418746800E7E33C /* AppDelegate.swift */; };
 		23135B302418748F00E7E33C /* Login_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B222418748F00E7E33C /* Login_VC.swift */; };
@@ -19,11 +18,14 @@
 		23135B322418748F00E7E33C /* Events_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B252418748F00E7E33C /* Events_Cell.swift */; };
 		23135B332418748F00E7E33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23135B272418748F00E7E33C /* LaunchScreen.storyboard */; };
 		23135B342418748F00E7E33C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23135B292418748F00E7E33C /* Main.storyboard */; };
-		23135B352418748F00E7E33C /* myriadpro-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23135B2C2418748F00E7E33C /* myriadpro-light.otf */; };
-		23135B362418748F00E7E33C /* myriadpro-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 23135B2D2418748F00E7E33C /* myriadpro-bold.otf */; };
-		23135B372418748F00E7E33C /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B2F2418748F00E7E33C /* EventModel.swift */; };
+		23135B372418748F00E7E33C /* Event_Listing_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B2F2418748F00E7E33C /* Event_Listing_Model.swift */; };
 		23135B39241874B100E7E33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23135B38241874B100E7E33C /* Assets.xcassets */; };
-		23135B3B2418753700E7E33C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23135B3A2418753700E7E33C /* Utilities.swift */; };
+		2380C515242113EE004254EE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380C514242113EE004254EE /* Theme.swift */; };
+		2380C517242114A8004254EE /* Theme_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380C516242114A8004254EE /* Theme_Protocol.swift */; };
+		2380C5192421184A004254EE /* Light_Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380C5182421184A004254EE /* Light_Theme.swift */; };
+		2380C51D24211C0F004254EE /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2380C51C24211C0F004254EE /* Theme.xcassets */; };
+		2380C52124215504004254EE /* Dark_Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380C52024215504004254EE /* Dark_Theme.swift */; };
+		2380C5292423C2ED004254EE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380C5282423C2ED004254EE /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,6 @@
 		23135B0C2418741700E7E33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23135B162418743F00E7E33C /* UpcomingEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UpcomingEvents.json; sourceTree = "<group>"; };
 		23135B172418743F00E7E33C /* PastEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PastEvents.json; sourceTree = "<group>"; };
-		23135B1B2418744B00E7E33C /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		23135B1C2418744B00E7E33C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		23135B1F2418746800E7E33C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23135B222418748F00E7E33C /* Login_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login_VC.swift; sourceTree = "<group>"; };
@@ -53,11 +54,14 @@
 		23135B252418748F00E7E33C /* Events_Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events_Cell.swift; sourceTree = "<group>"; };
 		23135B282418748F00E7E33C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23135B292418748F00E7E33C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		23135B2C2418748F00E7E33C /* myriadpro-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myriadpro-light.otf"; sourceTree = "<group>"; };
-		23135B2D2418748F00E7E33C /* myriadpro-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "myriadpro-bold.otf"; sourceTree = "<group>"; };
-		23135B2F2418748F00E7E33C /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		23135B2F2418748F00E7E33C /* Event_Listing_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event_Listing_Model.swift; sourceTree = "<group>"; };
 		23135B38241874B100E7E33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23135B3A2418753700E7E33C /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2380C514242113EE004254EE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2380C516242114A8004254EE /* Theme_Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme_Protocol.swift; sourceTree = "<group>"; };
+		2380C5182421184A004254EE /* Light_Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light_Theme.swift; sourceTree = "<group>"; };
+		2380C51C24211C0F004254EE /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		2380C52024215504004254EE /* Dark_Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark_Theme.swift; sourceTree = "<group>"; };
+		2380C5282423C2ED004254EE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,16 +104,15 @@
 		23135AF22418741400E7E33C /* USTGlobal_Demo_For_Interview */ = {
 			isa = PBXGroup;
 			children = (
-				23135B1A2418744B00E7E33C /* Extension */,
+				2380C513242113D1004254EE /* Themes */,
+				23135B1A2418744B00E7E33C /* Extensions */,
 				23135B1F2418746800E7E33C /* AppDelegate.swift */,
 				23135AF52418741400E7E33C /* SceneDelegate.swift */,
-				23135B2A2418748F00E7E33C /* Font */,
 				23135B2E2418748F00E7E33C /* Model */,
 				23135B262418748F00E7E33C /* View */,
 				23135B212418748F00E7E33C /* Controllers */,
 				23135B38241874B100E7E33C /* Assets.xcassets */,
 				23135B012418741700E7E33C /* Info.plist */,
-				23135B3A2418753700E7E33C /* Utilities.swift */,
 			);
 			path = USTGlobal_Demo_For_Interview;
 			sourceTree = "<group>";
@@ -132,13 +135,13 @@
 			path = "Json Files";
 			sourceTree = "<group>";
 		};
-		23135B1A2418744B00E7E33C /* Extension */ = {
+		23135B1A2418744B00E7E33C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				23135B1B2418744B00E7E33C /* UIColor.swift */,
 				23135B1C2418744B00E7E33C /* String.swift */,
+				2380C5282423C2ED004254EE /* Alert.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		23135B212418748F00E7E33C /* Controllers */ = {
@@ -168,29 +171,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		23135B2A2418748F00E7E33C /* Font */ = {
-			isa = PBXGroup;
-			children = (
-				23135B2B2418748F00E7E33C /* MyriadPro Text */,
-			);
-			path = Font;
-			sourceTree = "<group>";
-		};
-		23135B2B2418748F00E7E33C /* MyriadPro Text */ = {
-			isa = PBXGroup;
-			children = (
-				23135B2C2418748F00E7E33C /* myriadpro-light.otf */,
-				23135B2D2418748F00E7E33C /* myriadpro-bold.otf */,
-			);
-			path = "MyriadPro Text";
-			sourceTree = "<group>";
-		};
 		23135B2E2418748F00E7E33C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				23135B2F2418748F00E7E33C /* EventModel.swift */,
+				23135B2F2418748F00E7E33C /* Event_Listing_Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2380C513242113D1004254EE /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				2380C514242113EE004254EE /* Theme.swift */,
+				2380C516242114A8004254EE /* Theme_Protocol.swift */,
+				2380C5182421184A004254EE /* Light_Theme.swift */,
+				2380C52024215504004254EE /* Dark_Theme.swift */,
+				2380C51C24211C0F004254EE /* Theme.xcassets */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +276,8 @@
 				23135B182418743F00E7E33C /* UpcomingEvents.json in Resources */,
 				23135B332418748F00E7E33C /* LaunchScreen.storyboard in Resources */,
 				23135B192418743F00E7E33C /* PastEvents.json in Resources */,
-				23135B352418748F00E7E33C /* myriadpro-light.otf in Resources */,
+				2380C51D24211C0F004254EE /* Theme.xcassets in Resources */,
 				23135B39241874B100E7E33C /* Assets.xcassets in Resources */,
-				23135B362418748F00E7E33C /* myriadpro-bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,14 +295,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23135B3B2418753700E7E33C /* Utilities.swift in Sources */,
-				23135B1D2418744B00E7E33C /* UIColor.swift in Sources */,
 				23135B322418748F00E7E33C /* Events_Cell.swift in Sources */,
 				23135B312418748F00E7E33C /* EventList_VC.swift in Sources */,
+				2380C517242114A8004254EE /* Theme_Protocol.swift in Sources */,
 				23135B1E2418744B00E7E33C /* String.swift in Sources */,
+				2380C52124215504004254EE /* Dark_Theme.swift in Sources */,
 				23135B202418746800E7E33C /* AppDelegate.swift in Sources */,
+				2380C5292423C2ED004254EE /* Alert.swift in Sources */,
 				23135AF62418741400E7E33C /* SceneDelegate.swift in Sources */,
-				23135B372418748F00E7E33C /* EventModel.swift in Sources */,
+				2380C515242113EE004254EE /* Theme.swift in Sources */,
+				23135B372418748F00E7E33C /* Event_Listing_Model.swift in Sources */,
+				2380C5192421184A004254EE /* Light_Theme.swift in Sources */,
 				23135B302418748F00E7E33C /* Login_VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = USTGlobal_Demo_For_Interview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appedify.USTGlobal-Demo-For-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -477,6 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = USTGlobal_Demo_For_Interview/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appedify.USTGlobal-Demo-For-Interview";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
