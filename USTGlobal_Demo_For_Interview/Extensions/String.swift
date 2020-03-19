@@ -8,8 +8,10 @@
 
 import UIKit
 
-extension String{
-    func isValidEmail() -> Bool{
+extension String
+{
+    func isValidEmail() -> Bool
+    {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let emailpredicate = NSPredicate(format:"SELF MATCHES [c]%@",emailRegex)
         return (emailpredicate.evaluate(with: self))
@@ -17,12 +19,14 @@ extension String{
     
 }
 
-extension UILabel {
-    func halfTextColorChange (fullText : String , changeText : String ) {
+extension UILabel
+{
+    func halfTextColorChange (fullText : String , changeText : String,textColor:UIColor )
+    {
         let strNumber: NSString = fullText as NSString
         let range = (strNumber).range(of: changeText)
         let attribute = NSMutableAttributedString.init(string: fullText)
-        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: Theme.currentTheme.App_Main_Color , range: range)
+        attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: textColor , range: range)
         self.attributedText = attribute
     }
 }

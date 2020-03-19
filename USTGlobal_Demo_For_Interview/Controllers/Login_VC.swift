@@ -13,6 +13,8 @@ class Login_VC: UIViewController, UITextFieldDelegate
     
     //MARK: Properties
     
+    
+    
     @IBOutlet weak var viewOfBackground: UIView!
     @IBOutlet weak var viewOfBGImage: UIView!
     @IBOutlet weak var imgViewOfBGImage: UIImageView!
@@ -34,7 +36,6 @@ class Login_VC: UIViewController, UITextFieldDelegate
             didSet
             {
                 lblDetails.text = "By clicking next, you're agree to our Privacy policy"
-                lblDetails.halfTextColorChange(fullText: lblDetails.text!, changeText: "Privacy policy")
                 let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapOnPrivacyPolicy))
                 lblDetails.isUserInteractionEnabled = true
                 lblDetails.addGestureRecognizer(tap)
@@ -50,7 +51,7 @@ class Login_VC: UIViewController, UITextFieldDelegate
         
     }
     
-    //MARK: Theme Setup
+    //MARK: Theme Apply
     func applyTheme()
     {
         lblTitle.textColor = Theme.currentTheme.App_Text_Color
@@ -59,6 +60,7 @@ class Login_VC: UIViewController, UITextFieldDelegate
         txtEmail.textColor = Theme.currentTheme.App_Text_Color
         viewOfBorder.backgroundColor = Theme.currentTheme.App_Main_Color
         lblDetails.textColor = Theme.currentTheme.App_Text_Color
+        lblDetails.halfTextColorChange(fullText: lblDetails.text!, changeText: "Privacy policy", textColor: Theme.currentTheme.App_Main_Color)
         btnThemeChange.onTintColor = Theme.currentTheme.App_Main_Color
     }
     
@@ -73,37 +75,34 @@ class Login_VC: UIViewController, UITextFieldDelegate
     
     @objc func tapOnPrivacyPolicy(sender:UITapGestureRecognizer)
     {
-        print("tap working")
+        self.alertView(alertTitle: "Information", alertMassage: "Privacy Policy will upload soon", buttonTitle: "Okay", controller: self)
     }
 
     @IBAction func btnNextAction(_ sender: Any)
     {
-        if let txt = txtEmail.text {
-            
-            if (txt.isValidEmail())
+        if txtEmail.text != ""
+        {
+            if ((txtEmail.text?.isValidEmail())!)
             {
                 NavigateToListingPage()
             }
             else
             {
-                self.alertView(alertTitle: "Warning", alertMassage: "Email not in proper format", buttonTitle: "Okay", controller: self)
-                
+                self.alertView(alertTitle: "Warning!", alertMassage: "Email not in proper format", buttonTitle: "Okay", controller: self)
             }
+        }
+        else
+        {
+            self.alertView(alertTitle: "Warning!", alertMassage: "Please enter valid email.", buttonTitle: "Okay", controller: self)
         }
     }
     
     //MARK: Default Funcations
-    
-    func alert()
-    {
-        let alert = UIAlertController(title: "Warning", message: "Email not in proper format", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
+   
     func NavigateToListingPage()
     {
+        txtEmail.text = ""
+        txtEmail.resignFirstResponder()
         let controller = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventList_VC") as! EventList_VC
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -113,7 +112,7 @@ class Login_VC: UIViewController, UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
     {
       txtEmail.resignFirstResponder()
-
+        
         return true
     }
     

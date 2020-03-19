@@ -14,6 +14,7 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     // MARK: Properties
     
+    
     @IBOutlet weak var viewOfBackground: UIView!
         {
             didSet
@@ -113,6 +114,8 @@ class EventList_VC: UIViewController,UITableViewDelegate,UITableViewDataSource
         {
             finalURl = Bundle.main.url(forResource: "PastEvents", withExtension: "json")
         }
+        
+        //MARK: Get data from Model Class
         
         getEventObjectWith(finalURl: finalURl!){ (data, error) in
                 self.arrOfEventsDetails = data
